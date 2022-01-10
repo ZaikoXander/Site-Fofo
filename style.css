@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&family=Licorice&family=Source+Sans+Pro:wght@600&display=swap');
 /* Color Theme Swatches in RGBA */
 :root {
     --c1: rgba(179, 134, 168, 1);
@@ -6,7 +6,7 @@
     --c3: rgba(242, 181, 228, 1);
     --c4: rgba(255, 191, 240, 1);
     --c5: rgba(217, 163, 204, 1);
-    --c6: rgb(255, 251, 238);
+    --c6: rgba(255, 251, 238, 1);
 }
 
 * {
@@ -32,29 +32,52 @@ a {
     align-items: center;
 }
 
-.menu a {
+#logo {
+    font-family: 'Licorice', cursive;
+    font-weight: bold;
+    font-size: 3em;
+    margin: 0 calc(90px - 64.47px - 10px) 0px 15px;
+    color: var(--c2);
+}
+
+.menu-item {
     text-decoration: none;
     color: var(--c1);
     font-weight: bold;
     font-size: 1.3em;
     padding: 0 15px;
     height: 75px;
-    width: fit-content;
+    width: max-content;
     display: flex;
     align-items: center;
 }
 
-.menu a:first-child {
+.menu-item:nth-child(1) {
     margin-left: 90px;
 }
 
-.menu a:hover {
+.menu-item:hover {
     background-color: var(--c1);
     color: var(--c6);
 }
 
 .simbolo {
     font-size: 1.2em;
+}
+
+.menu-item #novo {
+    font-size: 0.6em;
+    background-color: var(--c6);
+    border: 1px solid black;
+    color: black;
+    border-radius: 25px;
+    padding: 3px 10px;
+    margin-left: 5px;
+}
+
+.menu-item:hover #novo {
+    background-color: var(--c6);
+    color: black;
 }
 
 .nav-menus {
@@ -64,28 +87,47 @@ a {
     display: none;
 }
 
-#close {
+#fechar {
     position: absolute;
     font-size: 3em;
     right: 0;
     padding: 15px 30px;
+    color: var(--c6);
 }
 
-#close:hover {
-    background-color: white;
+#fechar:hover {
+    background-color: var(--c6);
+    color: var(--c2);
 }
 
-.nav-menus-tutoriais {
-    border: 3px solid black;
-    padding: 50px 0;
-    margin: 0 420px;
+.nav-menus-item {
+    padding: 50px 0 0 0;
+    margin: 0 425px 0 420px;
+}
+
+#tutoriais, #referencias, #exercicios {
     display: none;
 }
 
-.nav-menus-tutoriais div {
-    margin-top: 35px;
+.tecnologias {
+    margin-top: calc(35px / 2);
+    display: flex;
+    justify-content: space-between;
 }
 
-.ativo {
-    display: block;
+.tecnologias div nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: calc(35px / 2);
+}
+
+.tecnologias div nav h2 {
+    margin-bottom: calc(35px / 2);
+}
+
+.tecnologias div nav a {
+    color: var(--c6);
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 6px;
+    font-size: 1.2em;
 }

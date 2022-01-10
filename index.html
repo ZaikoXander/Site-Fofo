@@ -5,70 +5,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Fofo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://kit.fontawesome.com/3ae891949f.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </head>
 <body>
     <header>
         <nav class="menu">
-            <a href="javascript:void(0)" onclick="fofo_nav('tutoriais');">Tutoriais<i class="fas fa-caret-down simbolo"></i></a>
-            <a href="javascript:void(0)" onclick="fofo_nav('referencias');">Referências<i class="fas fa-caret-down simbolo"></i></a>
-            <a href="javascript:void(0)" onclick="fofo_nav('exercicios');">Exercícios<i class="fas fa-caret-down simbolo"></i></a>
-            <a href="#">Videos</a>
-        </header>
-    </nav>
+            <a href="#" id="logo">Fofo</a>
+            <a href="javascript:void(0)" onmouseover="mouseover_menu_item(0);" onmouseout="mouseout_menu_item(0)" class="menu-item" onclick="fofo_nav('tutoriais');">Tutoriais<i class="fas fa-caret-down simbolo"></i></a>
+            <a href="javascript:void(0)" onmouseover="mouseover_menu_item(1);" onmouseout="mouseout_menu_item(1)" class="menu-item" onclick="fofo_nav('referencias');">Referências<i class="fas fa-caret-down simbolo"></i></a>
+            <a href="javascript:void(0)" onmouseover="mouseover_menu_item(2);" onmouseout="mouseout_menu_item(2)" class="menu-item" onclick="fofo_nav('exercicios');">Exercícios<i class="fas fa-caret-down simbolo"></i></a>
+            <a href="#" class="menu-item">Videos<span id="novo">Novo</span></a>
+        </nav>
+    </header>
     <nav class="nav-menus">
-        <a href="javascript:void(0)" onclick="fofo_nav('close');"><span id="close">&times;</span></a>
-        <div class="nav-menus-tutoriais">
+        <a href="javascript:void(0)" onclick="fofo_nav();"><span id="fechar"><i class="fas fa-times"></i></span></a>
+        <div class="nav-menus-item" id="tutoriais">
             <h1>Tutoriais</h1>
-            <div>
-                <nav>
-                    <h2>HTML e CSS</h2>
-                    <a href="#">Aprenda HTML</a><br>
-                    <a href="#">Aprenda CSS</a><br>
-                    <a href="#">Aprenda RWD</a><br>
-                    <a href="#">Aprenda Bootstrap</a><br>
-                    <a href="#">Aprenda W3.CSS</a><br>
-                    <a href="#">Aprenda Colors</a><br>
-                    <a href="#">Aprenda Icons</a><br>
-                    <a href="#">Aprenda Graphics</a><br>
-                    <a href="#">Aprenda SVG</a><br>
-                    <a href="#">Aprenda Canvas</a><br>
-                    <a href="#">Aprenda How To</a><br>
-                    <a href="#">Aprenda Sass</a>
-                </nav>
-                <nav>
-                    <h2>Javascript</h2>
-                    <a href="#">Aprenda Javascript</a><br>
-                    <a href="#">Aprenda jQuery</a><br>
-                    <a href="#">Aprenda React</a><br>
-                    <a href="#">Aprenda AngularJS</a><br>
-                    <a href="#">Aprenda JSON</a><br>
-                    <a href="#">Aprenda AJAX</a><br>
-                    <a href="#">Aprenda AppML</a><br>
-                    <a href="#">Aprenda W3.JS</a>
-                </nav>
-                <nav>
-                    <h2>Programação</h2>
-                </nav>
-                <nav>
-                    <h2>Server Side</h2>
-                </nav>
-                <nav>
-                    <h2>Desenvolvimento Web</h2>
-                </nav>
-                <nav>
-                    <h2>Análise de Dados</h2>
-                </nav>
-                <nav>
-                    <h2>Tutoriais de XML</h2>
-                </nav>
+            <div class="tecnologias">
+                <div>
+                    <nav>
+                        <h2>HTML e CSS</h2>
+                        <a href="#">Aprenda HTML</a>
+                        <a href="#">Aprenda CSS</a>
+                        <a href="#">Aprenda RWD</a>
+                        <a href="#">Aprenda Bootstrap</a>
+                        <a href="#">Aprenda W3.CSS</a>
+                        <a href="#">Aprenda Colors</a>
+                        <a href="#">Aprenda Icons</a>
+                        <a href="#">Aprenda Graphics</a>
+                        <a href="#">Aprenda SVG</a>
+                        <a href="#">Aprenda Canvas</a>
+                        <a href="#">Aprenda How To</a>
+                        <a href="#">Aprenda Sass</a>
+                    </nav>
+                </div>
+                <div>
+                    <nav>
+                        <h2>Javascript</h2>
+                        <a href="#">Aprenda Javascript</a>
+                        <a href="#">Aprenda jQuery</a>
+                        <a href="#">Aprenda React</a>
+                        <a href="#">Aprenda AngularJS</a>
+                        <a href="#">Aprenda JSON</a>
+                        <a href="#">Aprenda AJAX</a>
+                        <a href="#">Aprenda AppML</a>
+                        <a href="#">Aprenda W3.JS</a>
+                    </nav>
+                    <nav>
+                        <h2>Programação</h2>
+                        <a href="#">Aprenda Python</a>
+                        <a href="#">Aprenda Java</a>
+                        <a href="#">Aprenda C++</a>
+                        <a href="#">Aprenda C#</a>
+                        <a href="#">Aprenda R</a>
+                        <a href="#">Aprenda Kotlin</a>
+                        <a href="#">Aprenda Go</a>
+                    </nav>
+                </div>
+                <div>
+                    <nav>
+                        <h2>Server Side</h2>
+                        <a href="#">Aprenda SQL</a>
+                        <a href="#">Aprenda MySQL</a>
+                        <a href="#">Aprenda PHP</a>
+                        <a href="#">Aprenda ASP</a>
+                        <a href="#">Aprenda Node.js</a>
+                        <a href="#">Aprenda Raspberry Pi</a>
+                        <a href="#">Aprenda Git</a>
+                    </nav>
+                    <nav>
+                        <h2>Desenvolvimento Web</h2>
+                        <a href="#">Crie um Site</a>
+                        <a href="#">Templates de Site</a>
+                        <a href="#">Estatísticas Web</a>
+                        <a href="#">Certificados Web</a>
+                        <a href="#">Desenvolvimento Web</a>
+                        <a href="#">Editor de Código</a>
+                        <a href="#">Teste Sua Velocidade de Digitação</a>
+                        <a href="#">Jogue um Code Game</a>
+                        <a href="#">Cyber Segurança</a>
+                        <a href="#">Acessibilidade</a>
+                    </nav>
+                </div>
+                <div>
+                    <nav>
+                        <h2>Análise de Dados</h2>
+                        <a href="#">Aprenda IA</a>
+                        <a href="#">Aprenda Machine Learning</a>
+                        <a href="#">Aprenda Ciência de Dados</a>
+                        <a href="#">Aprenda NumPy</a>
+                        <a href="#">Aprenda Pandas</a>
+                        <a href="#">Aprenda SciPy</a>
+                        <a href="#">Aprenda Matplotlib</a>
+                        <a href="#">Aprenda Estatísticas</a>
+                        <a href="#">Aprenda Excel</a>
+                        <a href="#">Aprenda Google Sheets</a>
+                    </nav>
+                    <nav>
+                        <h2>Tutoriais de XML</h2>
+                        <a href="#">Aprenda XML</a>
+                        <a href="#">Aprenda XML AJAX</a>
+                        <a href="#">Aprenda XML DOM</a>
+                        <a href="#">Aprenda XML DTD</a>
+                        <a href="#">Aprenda XML Schema</a>
+                        <a href="#">Aprenda XSLT</a>
+                        <a href="#">Aprenda XPath</a>
+                        <a href="#">Aprenda XQuery</a>
+                    </nav>
+                </div>
             </div>
         </div>
-        <div class="nav-menus-referencias"></div>
-        <div class="nav-menus-exercicios"></div>
-        <div class="nav-menus-videos"></div>
+        <div class="nav-menus-item" id="referencias">
+            <h1>Referências</h1>
+            <div class="tecnologias">
+                <nav></nav>
+            </div>
+        </div>
+        <div class="nav-menus-item" id="exercicios">
+            <h1>Exercícios</h1>
+            <div class="tecnologias">
+                <nav></nav>
+            </div>
+        </div>
     </nav>
 </body>
 </html>
