@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap');
+/* Color Theme Swatches in RGBA */
+:root {
+    --c1: rgba(179, 134, 168, 1);
+    --c2: rgba(115, 86, 108, 1);
+    --c3: rgba(242, 181, 228, 1);
+    --c4: rgba(255, 191, 240, 1);
+    --c5: rgba(217, 163, 204, 1);
+    --c6: rgb(255, 251, 238);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+body {
+    background-color: var(--c5);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    background-color: var(--c6);
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--c1);
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 0 15px;
+    height: 75px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.menu a:first-child {
+    margin-left: 90px;
+}
+
+.menu a:hover {
+    background-color: var(--c1);
+    color: var(--c6);
+}
+
+.simbolo {
+    font-size: 1.2em;
+}
+
+.nav-menus {
+    position: relative;
+    background-color: var(--c1);
+    height: 840px;
+    display: none;
+}
+
+#close {
+    position: absolute;
+    font-size: 3em;
+    right: 0;
+    padding: 15px 30px;
+}
+
+#close:hover {
+    background-color: white;
+}
+
+.nav-menus-tutoriais {
+    border: 3px solid black;
+    padding: 50px 0;
+    margin: 0 420px;
+    display: none;
+}
+
+.nav-menus-tutoriais div {
+    margin-top: 35px;
+}
+
+.ativo {
+    display: block;
+}
