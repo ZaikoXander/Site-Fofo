@@ -1,5 +1,10 @@
 let menuglobal = [false, false, false];
 let menu_item = document.getElementsByClassName('menu-item');
+/**
+ * Por algum motivo o *:hover* do CSS não está funcionando muito bem,
+ * tive que apelar para essas funções :/ .
+ */
+
 function mouseover_menu_item(index) {
     menu_item[index].style.backgroundColor = 'rgba(179, 134, 168, 1)';
     menu_item[index].style.color = 'rgba(255, 251, 238, 1)';
@@ -41,7 +46,7 @@ function fofo_nav(menu) {
             displayNone[index1]();
             menuglobal[index1] = false;
         } else if (index3 == null) {
-            // Repete o código dentro de eval 3 vezes e adiciona índices de 1 a 2
+            // Repete o código dentro de eval 2 vezes e adiciona índices de 1 a 2
             for (let i = 1; i < 3; i++) {
                 eval(
                     `menu_item[index${i}].style.backgroundColor = 'rgba(255, 251, 238, 1)';

@@ -7,6 +7,7 @@
     --c4: rgba(255, 191, 240, 1);
     --c5: rgba(217, 163, 204, 1);
     --c6: rgba(255, 251, 238, 1);
+    --c7: rgba(217, 192, 203, 1);
 }
 
 * {
@@ -17,6 +18,7 @@
 }
 
 body {
+    position: relative;
     background-color: var(--c5);
 }
 
@@ -81,7 +83,9 @@ a {
 }
 
 .nav-menus {
-    position: relative;
+    position: absolute;
+    top: 75px;
+    width: 100%;
     background-color: var(--c1);
     height: 840px;
     display: none;
@@ -101,8 +105,16 @@ a {
 }
 
 .nav-menus-item {
-    padding: 50px 0 0 0;
-    margin: 0 425px 0 420px;
+    max-width: 1100px;
+    margin: 0 auto 0 auto;
+    padding: 40px 8px 0;
+}
+
+.nav-menus-item h1 {
+    font-size: 32px;
+    padding: 0.01em 16px;
+    line-height: 1.5;
+    font-weight: 400;
 }
 
 #tutoriais, #referencias, #exercicios {
@@ -110,9 +122,13 @@ a {
 }
 
 .tecnologias {
-    margin-top: calc(35px / 2);
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
+}
+
+.tecnologias div {
+    padding: 0 8px;
+    width: 25%;
 }
 
 .tecnologias div nav {
@@ -122,12 +138,43 @@ a {
 }
 
 .tecnologias div nav h2 {
-    margin-bottom: calc(35px / 2);
+    padding-left: 6px;
+    margin: 26px 0;
+    margin: 0 0 calc(35px / 2) 0;
+    font-size: 24px;
 }
 
-.tecnologias div nav a {
+.links {
     color: var(--c6);
     font-family: 'Source Sans Pro', sans-serif;
-    margin-bottom: 6px;
-    font-size: 1.2em;
+    padding: 4px 0 4px 6px;
+    font-size: 18px;
+}
+
+.links:hover {
+    background-color: var(--c7);
+    color: var(--c2);
+}
+
+/* Parte dos Exercícios */
+
+.botao-exercicios {
+    margin: 0 0 0;
+    font-size: 24px;
+    font-weight: 400;
+
+    width: 155px;
+    font-size: 21px;
+    padding: 2px 0 2px 6px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+
+    background-color: black;
+    color: var(--c1);
+}
+
+.botao-exercicios:hover {
+    background-color: var(--c6);
+    color: black;
 }
