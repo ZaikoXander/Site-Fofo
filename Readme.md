@@ -1,1 +1,1 @@
-Este repositório contém o projeto de um site.
+Este repositório contém o projeto de um site inspirado no [W3Schools](https://www.w3schools.com/).

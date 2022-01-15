@@ -1,0 +1,104 @@
+/* Parte do Header */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&family=Licorice&family=Source+Sans+Pro:wght@600&display=swap');
+
+:root {
+    --c1: rgb(179, 134, 168);
+    --c2: rgb(115, 86, 108);
+    --c3: rgba(242, 181, 228, 1);
+    --c4: rgba(255, 191, 240, 1);
+    --c5: rgba(217, 163, 204, 1);
+    --c6: rgba(255, 251, 238, 1);
+    --c7: rgba(217, 192, 203, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+body {
+    position: relative;
+    background-color: var(--c5);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    background-color: var(--c6);
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    font-family: 'Licorice', cursive;
+    font-weight: bold;
+    font-size: 3em;
+    margin: 0 calc(90px - 64.47px - 10px) 0px 15px;
+    color: var(--c2);
+}
+
+.menu-item {
+    text-decoration: none;
+    color: var(--c1);
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 0 15px;
+    height: 75px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item:hover {
+    background-color: var(--c1);
+    color: var(--c6);
+}
+
+.simbolo {
+    font-size: 1.2em;
+}
+
+.menu-item #novo {
+    font-size: 0.6em;
+    background-color: var(--c6);
+    border: 1px solid black;
+    color: black;
+    border-radius: 25px;
+    padding: 3px 10px;
+    margin-left: 5px;
+}
+
+.menu-item:hover #novo {
+    background-color: var(--c6);
+    color: black;
+}
+
+#menu-telapequena {
+    display: none;
+}
+
+.fa-bars {
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 785px) {
+    .menu-item:nth-child(5) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .menu-item {
+        display: none;
+    }
+    #menu-telapequena {
+        display: flex;
+    }
+}

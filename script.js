@@ -17,10 +17,10 @@ function mouseout_menu_item(index) {
 }
 
 function fofo_nav(menu) {
-    let nav_menus = document.querySelector('nav.nav-menus');
-    let nav_menus_tutoriais = document.getElementById('tutoriais');
-    let nav_menus_referencias = document.getElementById('referencias');
-    let nav_menus_exercicios = document.getElementById('exercicios');
+    let nav_menu = document.querySelector('div.nav-menu');
+    let nav_menu_tutoriais = document.getElementById('tutoriais');
+    let nav_menu_referencias = document.getElementById('referencias');
+    let nav_menu_exercicios = document.getElementById('exercicios');
     let simbolo = document.getElementsByClassName('simbolo');
 
     /**
@@ -29,13 +29,13 @@ function fofo_nav(menu) {
     function reseta(index1, index2 = null, index3 = null) {
         let displayNone = [
             function() {
-                nav_menus_tutoriais.style.display = '';
+                nav_menu_tutoriais.style.display = '';
             },
             function() {
-                nav_menus_referencias.style.display = '';
+                nav_menu_referencias.style.display = '';
             },
             function() {
-                nav_menus_exercicios.style.display = '';
+                nav_menu_exercicios.style.display = '';
             }
         ]
 
@@ -67,7 +67,7 @@ function fofo_nav(menu) {
                     menuglobal[index${i}] = false;`
                 )
             }
-            nav_menus.style.display = '';
+            nav_menu.style.display = '';
         }
     }
 
@@ -112,19 +112,19 @@ function fofo_nav(menu) {
      * caso algum menu seja chamado.
      */
     if(menuglobal.includes(true)) {
-        nav_menus.style.display = 'block';
+        nav_menu.style.display = 'block';
         if (menuglobal[0] == true) {
-            nav_menus_tutoriais.style.display = 'block';
+            nav_menu_tutoriais.style.display = 'block';
             menu_item[0].style.backgroundColor = 'rgba(179, 134, 168, 1)';
             menu_item[0].style.color = 'rgba(255, 251, 238, 1)';
             simbolo[0].classList.replace('fa-caret-down', 'fa-caret-up');
         } else if (menuglobal[1] == true) {
-            nav_menus_referencias.style.display = 'block';
+            nav_menu_referencias.style.display = 'block';
             menu_item[1].style.backgroundColor = 'rgba(179, 134, 168, 1)';
             menu_item[1].style.color = 'rgba(255, 251, 238, 1)';
             simbolo[1].classList.replace('fa-caret-down', 'fa-caret-up');
         } else {
-            nav_menus_exercicios.style.display = 'block';
+            nav_menu_exercicios.style.display = 'block';
             menu_item[2].style.backgroundColor = 'rgba(179, 134, 168, 1)';
             menu_item[2].style.color = 'rgba(255, 251, 238, 1)';
             simbolo[2].classList.replace('fa-caret-down', 'fa-caret-up');
