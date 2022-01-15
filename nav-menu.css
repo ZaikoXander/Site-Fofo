@@ -148,7 +148,7 @@
     }
     /* Isto está no JS
     .nav-menu {
-        height: calc(720px * 2);
+        height: 1440px;
     }*/
 
     #referencias #parte-cima {
@@ -180,7 +180,7 @@
     }
     /* Isto está no JS
     .nav-menu {
-        height: calc(720px * 2);
+        height: 1440px;
     }*/
 }
 
@@ -190,4 +190,31 @@
         background-color: var(--c1);
         padding: 7px 30px;
     }
+}
+
+@media screen and (max-width: 640px) {
+    #parte-cima, #parte-baixo {
+        display: initial;
+    }
+
+    .tecnologias-item {
+        width: 100%;
+    }
+
+    #tutoriais #parte-cima, #referencias #parte-cima {
+        position: initial;
+    }
+
+    #tutoriais #parte-baixo, #referencias #parte-baixo {
+        position: initial;
+        width: 100%;
+    }
+
+    .tecnologias-item.analise-dados-tutoriais, .tecnologias-item.server-side-referencias {
+        margin-top: 0;
+    }
+    /* Isto está no JS
+    .nav-menu {
+        height: calc(600px * 3);
+    }*/
 }
